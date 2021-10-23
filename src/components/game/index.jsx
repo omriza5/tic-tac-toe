@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import GameBoard from "../gameBoard";
 import {
   createBoardArray,
   determineWinner,
   updateCellValue,
+  updateHistory,
 } from "../../services/game";
+import GameBoard from "../gameBoard";
 import { cloneDeep } from "lodash";
-import "./style.css";
 import HistoryList from "../historyList/index";
 import Button from "../button/index";
+import "./style.css";
 
 const Game = () => {
   const [gameStatus, setGameStatus] = useState([]);
@@ -71,12 +72,7 @@ const Game = () => {
     setNextPlayer(historyObj.nextPlayer === "o" ? "x" : "o");
     setNumOfRounds(historyObj.numOfRounds + 1);
     setWinner(historyObj.winner);
-    setHistory(popFromArray(history, index));
-  };
-
-  const popFromArray = (arr, index) => {
-    const newArr = cloneDeep(arr);
-    return newArr.slice(0, index + 1);
+    setHistory(updateHistory(history, index));
   };
 
   return (

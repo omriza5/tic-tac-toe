@@ -1,3 +1,4 @@
+import { cloneDeep } from "lodash";
 const NUM_OF_CELLS = 9;
 
 const winningConditions = [
@@ -56,4 +57,9 @@ export const determineWinner = (gameStatus) => {
       return a.value;
     }
   }
+};
+
+export const updateHistory = (historeis, index) => {
+  const newArr = cloneDeep(historeis);
+  return newArr.slice(0, index + 1);
 };
