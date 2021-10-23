@@ -12,3 +12,10 @@
   color: #fff;
   border: 1px solid #fff;
 }
+
+@media screen and (max-width: 670px) {
+  .btn:hover {
+    background: #fff;
+    color: black;
+  }
+}
