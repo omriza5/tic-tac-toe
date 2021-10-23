@@ -4,7 +4,7 @@
 
 My project is hosted [Here](https://omri-zaher-tic-tac-toe.netlify.app/)
 
-![](https://media4.giphy.com/media/YnZPEeeC7q6pQEZw1I/giphy.gif?cid=ecf05e47jv5vaj8bsqbjdic4makgmv19jzni68ojt3yvoial&rid=giphy.gif&ct=g)
+![](https://media.giphy.com/media/riDHBmjuV2NhOJ2IeU/giphy.gif)
 
 ## Components Structure
 
