@@ -9,3 +9,9 @@ body {
   background: #2e4ec8;
   font-family: "Andada Pro", serif;
 }
+
+@media screen and (max-width: 810px) {
+  * {
+    font-size: 50%;
+  }
+}

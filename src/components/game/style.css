@@ -21,7 +21,6 @@
 
 .round-info {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
 }
 .round-info p {
@@ -46,4 +45,24 @@
 .game-result h1 {
   font-size: 5rem;
   color: #fff;
+}
+
+@media screen and (max-width: 670px) {
+  .game-main {
+    flex-direction: column-reverse;
+  }
+
+  .round-info {
+    padding-left: 8rem;
+    width: 100%;
+  }
+  .round-info p {
+    font-size: 2rem;
+  }
+
+  .game-result h1 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: #fff;
+  }
 }

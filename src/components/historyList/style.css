@@ -13,3 +13,20 @@
   color: #fff;
   cursor: pointer;
 }
+
+@media screen and (max-width: 670px) {
+  .history {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+  .history ul {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 15vh;
+  }
+  .history li {
+    display: flex;
+    justify-content: center;
+  }
+}

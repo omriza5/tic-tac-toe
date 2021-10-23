@@ -8,3 +8,11 @@
   margin-left: 5rem;
   gap: 5px;
 }
+
+@media screen and (max-width: 670px) {
+  .board {
+    height: 40rem;
+    width: 40rem;
+    margin: 0 auto;
+  }
+}
