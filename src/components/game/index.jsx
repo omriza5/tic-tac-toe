@@ -24,7 +24,6 @@ const Game = () => {
 
   useEffect(() => {
     setWinner(determineWinner(gameStatus));
-    // setWinner(handleResultValidation(gameStatus));
 
     const updateNext = () => {
       if (currentPlayer === "x") setNextPlayer("o");
@@ -36,6 +35,7 @@ const Game = () => {
   const handleCellClick = (pressedCell) => {
     // disable cell clicks if there is a winner
     if (winner || numOfRounds === 9) return;
+
     const newGameStatus = [...gameStatus];
     const cell = newGameStatus.find((c) => c.id === pressedCell.id);
 
@@ -60,11 +60,23 @@ const Game = () => {
   };
 
   const handleHistoryClick = (historyObj, index) => {
+    //case first there is only first round
+    if (history.length === 1) return;
+
+    // case clicking the last step
+    if (history.length === index + 1) return;
+
     setGameStatus(historyObj.gameStatus);
-    setCurrentPlayer(historyObj.currentPlayer);
-    setNextPlayer(historyObj.nextPlayer);
-    setNumOfRounds(historyObj.numOfRounds);
+    setCurrentPlayer(historyObj.currentPlayer === "x" ? "o" : "x");
+    setNextPlayer(historyObj.nextPlayer === "o" ? "x" : "o");
+    setNumOfRounds(historyObj.numOfRounds + 1);
     setWinner(historyObj.winner);
+    setHistory(popFromArray(history, index));
+  };
+
+  const popFromArray = (arr, index) => {
+    const newArr = cloneDeep(arr);
+    return newArr.slice(0, index + 1);
   };
 
   return (
