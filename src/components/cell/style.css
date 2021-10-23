@@ -1,0 +1,15 @@
+.cell {
+  border: 2px dashed #fff;
+  cursor: pointer;
+}
+
+.bg-x {
+  background: url("../../imgs/x-shape.png") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+}
+.bg-o {
+  background: url("../../imgs/o-shape.png") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+}
